@@ -1,0 +1,18 @@
+[submodule "bootstrap/cookbooks/apt"]
+	path = bootstrap/cookbooks/apt
+	url = https://github.com/chef-cookbooks/apt
+[submodule "bootstrap/cookbooks/couchbase"]
+	path = bootstrap/cookbooks/couchbase
+	url = https://github.com/ketakigangal/couchbase
+[submodule "bootstrap/cookbooks/compat_resource"]
+	path = bootstrap/cookbooks/compat_resource
+	url = https://github.com/chef-cookbooks/compat_resource
+[submodule "bootstrap/cookbooks/windows"]
+	path = bootstrap/cookbooks/windows
+	url = https://github.com/chef-cookbooks/windows
+[submodule "bootstrap/cookbooks/chef_handler"]
+	path = bootstrap/cookbooks/chef_handler
+	url = https://github.com/chef-cookbooks/chef_handler
+[submodule "bootstrap/cookbooks/yum"]
+	path = bootstrap/cookbooks/yum
+	url = https://github.com/chef-cookbooks/yum
