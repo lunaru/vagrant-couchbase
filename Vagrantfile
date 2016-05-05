@@ -16,7 +16,6 @@ Vagrant.configure(2) do |config|
     node.vm.synced_folder ".", "/vagrant"
 
     node.vm.provision "chef_solo" do |chef|
-      chef.cookbooks_path = ["bootstrap/cookbooks", "bootstrap/site-cookbooks"]
       chef.add_recipe "apt"
       chef.add_recipe "couchbase::server"
       chef.json = {
@@ -35,6 +34,8 @@ Vagrant.configure(2) do |config|
   config.vm.define "node2" do |node|
     node.vm.box = "precise64"
     node.omnibus.chef_version = "12.4.1"
+    config.berkshelf.enabled = true
+    config.berkshelf.berksfile_path = 'bootstrap/Berksfile'
 
     node.vm.network "private_network", ip: "88.88.88.12"
 
@@ -44,7 +45,6 @@ Vagrant.configure(2) do |config|
     node.vm.synced_folder ".", "/vagrant"
 
     node.vm.provision "chef_solo" do |chef|
-      chef.cookbooks_path = ["bootstrap/cookbooks", "bootstrap/site-cookbooks"]
       chef.add_recipe "apt"
       chef.add_recipe "couchbase::server"
       chef.json = {
@@ -63,6 +63,8 @@ Vagrant.configure(2) do |config|
   config.vm.define "node3" do |node|
     node.vm.box = "precise64"
     node.omnibus.chef_version = "12.4.1"
+    config.berkshelf.enabled = true
+    config.berkshelf.berksfile_path = 'bootstrap/Berksfile'
 
     node.vm.network "private_network", ip: "88.88.88.13"
 
@@ -72,7 +74,6 @@ Vagrant.configure(2) do |config|
     node.vm.synced_folder ".", "/vagrant"
 
     node.vm.provision "chef_solo" do |chef|
-      chef.cookbooks_path = ["bootstrap/cookbooks", "bootstrap/site-cookbooks"]
       chef.add_recipe "apt"
       chef.add_recipe "couchbase::server"
       chef.json = {
