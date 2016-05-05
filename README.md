@@ -1,3 +1,5 @@
+An example of setting up a couchbase cluster using vagrant
+
 1. clone repo
 2. Install vagrant omnibus plugin and vagrant berkshelf plugin
 3. `vagrant up`
