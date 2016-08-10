@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "node2" do |node|
-    node.vm.box = "precise64"
+    node.vm.box = "trusty64"
     node.omnibus.chef_version = "12.4.1"
     config.berkshelf.enabled = true
     config.berkshelf.berksfile_path = 'bootstrap/Berksfile'
@@ -61,7 +61,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "node3" do |node|
-    node.vm.box = "precise64"
+    node.vm.box = "trusty64"
     node.omnibus.chef_version = "12.4.1"
     config.berkshelf.enabled = true
     config.berkshelf.berksfile_path = 'bootstrap/Berksfile'
@@ -80,9 +80,9 @@ Vagrant.configure(2) do |config|
         "couchbase" => {
           "server" => {
             "password" => "hocuspocus",
-            "version" => "4.0.0",
-            "memory_quota_mb" => 256,
-            "package_full_url" => "http://packages.couchbase.com/releases/4.0.0/couchbase-server-community_4.0.0-ubuntu14.04_amd64.deb"
+            "version" => "4.1.0",
+            "memory_quota_mb" => 512,
+            "package_full_url" => "http://packages.couchbase.com/releases/4.1.0/couchbase-server-community_4.1.0-ubuntu14.04_amd64.deb"
           }
         }
       }
